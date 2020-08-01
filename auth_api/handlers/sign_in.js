@@ -24,7 +24,7 @@ async function signInHandler(req,res,next) {
             expiresIn: 7776000
         });
         if (result) {
-            console.log('Auth success'+`${new Date().toISOString}`);
+            console.log('Auth success'+`${new Date().toISOString()}`);
             res.status(200).json({
                 "message": "authentication sucesss",
                 "token": token
