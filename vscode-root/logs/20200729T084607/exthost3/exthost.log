@@ -1,0 +1,24 @@
+[2020-07-29 09:41:32.724] [exthost] [info] extension host started
+[2020-07-29 09:41:32.741] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"extensionId":{"value":"vscode.debug-auto-launch","_lower":"vscode.debug-auto-launch"},"activationEvent":"*"}
+[2020-07-29 09:41:32.741] [exthost] [info] ExtensionService#loadCommonJSModule file:///Applications/Visual Studio Code.app/Contents/Resources/app/extensions/debug-auto-launch/dist/extension
+[2020-07-29 09:41:32.745] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"extensionId":{"value":"vscode.emmet","_lower":"vscode.emmet"},"activationEvent":"*"}
+[2020-07-29 09:41:32.745] [exthost] [info] ExtensionService#loadCommonJSModule file:///Applications/Visual Studio Code.app/Contents/Resources/app/extensions/emmet/dist/extension
+[2020-07-29 09:41:32.765] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"extensionId":{"value":"vscode.github","_lower":"vscode.github"},"activationEvent":"*"}
+[2020-07-29 09:41:32.765] [exthost] [info] ExtensionService#loadCommonJSModule file:///Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/main
+[2020-07-29 09:41:32.779] [exthost] [info] ExtensionService#_doActivateExtension vscode.github-authentication {"startup":true,"extensionId":{"value":"vscode.github-authentication","_lower":"vscode.github-authentication"},"activationEvent":"*"}
+[2020-07-29 09:41:32.779] [exthost] [info] ExtensionService#loadCommonJSModule file:///Applications/Visual Studio Code.app/Contents/Resources/app/extensions/github-authentication/dist/extension.js
+[2020-07-29 09:41:32.785] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"extensionId":{"value":"vscode.merge-conflict","_lower":"vscode.merge-conflict"},"activationEvent":"*"}
+[2020-07-29 09:41:32.785] [exthost] [info] ExtensionService#loadCommonJSModule file:///Applications/Visual Studio Code.app/Contents/Resources/app/extensions/merge-conflict/dist/mergeConflictMain
+[2020-07-29 09:41:32.788] [exthost] [info] ExtensionService#_doActivateExtension vscode.microsoft-authentication {"startup":true,"extensionId":{"value":"vscode.microsoft-authentication","_lower":"vscode.microsoft-authentication"},"activationEvent":"*"}
+[2020-07-29 09:41:32.788] [exthost] [info] ExtensionService#loadCommonJSModule file:///Applications/Visual Studio Code.app/Contents/Resources/app/extensions/microsoft-authentication/dist/extension.js
+[2020-07-29 09:41:32.792] [exthost] [info] ExtensionService#_doActivateExtension vscode.search-result {"startup":true,"extensionId":{"value":"vscode.search-result","_lower":"vscode.search-result"},"activationEvent":"*"}
+[2020-07-29 09:41:32.793] [exthost] [info] ExtensionService#loadCommonJSModule file:///Applications/Visual Studio Code.app/Contents/Resources/app/extensions/search-result/dist/extension.js
+[2020-07-29 09:41:32.794] [exthost] [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode {"startup":true,"extensionId":{"value":"esbenp.prettier-vscode","_lower":"esbenp.prettier-vscode"},"activationEvent":"*"}
+[2020-07-29 09:41:32.794] [exthost] [info] ExtensionService#loadCommonJSModule file:///Users/maconline/.vscode/extensions/esbenp.prettier-vscode-5.1.3/dist/extension
+[2020-07-29 09:41:32.835] [exthost] [info] ExtensionService#_doActivateExtension ritwickdey.LiveServer {"startup":true,"extensionId":{"value":"ritwickdey.LiveServer","_lower":"ritwickdey.liveserver"},"activationEvent":"*"}
+[2020-07-29 09:41:32.835] [exthost] [info] ExtensionService#loadCommonJSModule file:///Users/maconline/.vscode/extensions/ritwickdey.liveserver-5.6.1/out/src/extension
+[2020-07-29 09:41:33.504] [exthost] [info] ExtensionService#_doActivateExtension SirTori.indenticator {"startup":true,"extensionId":{"value":"SirTori.indenticator","_lower":"sirtori.indenticator"},"activationEvent":"*"}
+[2020-07-29 09:41:33.504] [exthost] [info] ExtensionService#loadCommonJSModule file:///Users/maconline/.vscode/extensions/sirtori.indenticator-0.6.0/out/src/extension
+[2020-07-29 09:41:33.601] [exthost] [info] ExtensionService#_doActivateExtension vscode.github {"startup":true,"extensionId":{"value":"vscode.github","_lower":"vscode.github"},"activationEvent":"*"}
+[2020-07-29 09:41:33.601] [exthost] [info] ExtensionService#loadCommonJSModule file:///Applications/Visual Studio Code.app/Contents/Resources/app/extensions/github/dist/extension.js
+[2020-07-29 09:41:33.617] [exthost] [info] eager extensions activated
