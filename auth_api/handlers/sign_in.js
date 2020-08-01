@@ -9,9 +9,7 @@ signInRoute.use(bodyParser.urlencoded({ extended: true }))
 signInRoute.use(signInHandler);
 async function signInHandler(req,res,next) {
     try {
-        console.log(req.body)
         const queryResult = await userModel.findOne({ username: req.body.username });
-        console.log(queryResult)
         if (!queryResult) {
             throw new Error("Tên đăng nhập hoặc mật khẩu sai");
         };
@@ -19,12 +17,11 @@ async function signInHandler(req,res,next) {
         const payload = {
             check: true
         };
-        console.log(process.env.SECRET_KEY)
         const token = jwt.sign(payload, process.env.SECRET_KEY, {
             expiresIn: 7776000
         });
         if (result) {
-            console.log('Auth success'+`${new Date().toISOString()}`);
+            console.log('Auth success '+`${new Date().toISOString()}`);
             res.status(200).json({
                 "message": "authentication sucesss",
                 "token": token
