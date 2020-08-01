@@ -4,6 +4,8 @@ const signInRoute = express.Router();
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv').config();
+const bodyParser = require('body-parser')
+signInRoute.use(bodyParser.urlencoded({ extended: true }))
 signInRoute.use(signInHandler);
 async function signInHandler(req,res,next) {
     try {

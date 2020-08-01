@@ -22,13 +22,13 @@ try {
 };
 // application/x-www-form-urlencoded
 app.post("/admin/register", function (req, res, next) {
-    res.send(req.body);
-    // registerRoute(req, res, next);
+    // res.send(req.body);
+    registerRoute(req, res, next);
 });
 // application/x-www-form-urlencoded
 app.post("/admin/sign-in",function(req,res,next){
-    res.send(req.body)
-    // signInRoute(req,res,next);
+    // res.send(req.body)
+    signInRoute(req,res,next);
 })
 app.listen(process.env.PORT, () => {
     console.log(`Auth_Service is listening on port ${PORT}`);

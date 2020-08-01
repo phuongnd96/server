@@ -2,6 +2,8 @@ const express = require('express');
 const bcrypt = require('bcrypt');
 const userModel = require('../../mongo_models/user_model').userModel;
 const registerRoute = express.Router();
+const bodyParser = require('body-parser')
+registerRoute.use(bodyParser.urlencoded({ extended: true }))
 registerRoute.use(registerHandler);
 async function registerHandler(req, res, next) {
     try {
