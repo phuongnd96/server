@@ -8,7 +8,8 @@ const userSchema = new Schema({
             address: { type: String },
             phoneNumber:{type:String}
         }
-    ]
+    ],
+    role:String
 });
 const userModel = mongoose.model('userModel', userSchema);
 exports.userModel = userModel;

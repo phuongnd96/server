@@ -1,4 +1,5 @@
 const PORT = process.env.PORT || 3000;
+const logger = require('./index').logger;
 const ClientProductModels = require('./models/ClientProductModel').ClientProductModels;
 const AdminModels = require('./models/AdminModel').AdminModels;
 const BillModels = require('./models/BillModel').BillModels;
@@ -23,16 +24,16 @@ var bodyParser = require('body-parser')
 // app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 // app.use(express.bodyParser());
-// app.use(function (req, res, next) {
-//     res.setHeader("Access-Control-Allow-Origin", "*");
-//     res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-//     res.setHeader("X-Frame-Options", "ALLOWALL");
-//     res.setHeader(
-//         "Access-Control-Allow-Methods",
-//         "POST, GET, PUT, DELETE, OPTIONS"
-//     );
-//     next();
-// });
+app.use(function (req, res, next) {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.setHeader("X-Frame-Options", "ALLOWALL");
+    res.setHeader(
+        "Access-Control-Allow-Methods",
+        "POST, GET, PUT, DELETE, OPTIONS"
+    );
+    next();
+});
 // Set storage, lưu ở thưc mục upload (`${__dirname}/upload`)
 const storageMainImageFiles = multer.diskStorage({
     destination: function (req, file, cb) {
