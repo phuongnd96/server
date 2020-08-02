@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
+// passing PORT as argv from commandline
+const PORT =process.argv[2]||process.env.PORT;
 const cors = require('cors');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser')
