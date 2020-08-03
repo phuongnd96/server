@@ -52,7 +52,7 @@ app.post("/admin/upload/add/main", uploadMain.array('mainFile', 1), async (req, 
         if (files.length != 1) {
             throw new Error("You can only upload 1 file");
         }
-        const isExisted = await productModel.find({ name: req.body.productName });
+        const isExisted = await productModel.find({ productName: req.body.productName });
         if (isExisted.length) {
             throw new Error("Product name existed");
         }
