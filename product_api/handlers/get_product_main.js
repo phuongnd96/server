@@ -18,6 +18,7 @@ async function getProductRouteHandler(req, res, next) {
                 "link": `/assets/main?productName=${elem.productName}`
             })
         })
+        console.log(result)
         res.send(result);
         next();
     } catch (error) {
