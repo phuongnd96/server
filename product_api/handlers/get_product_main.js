@@ -8,10 +8,30 @@ async function getProductRouteHandler(req, res, next) {
         let perPage = req.query.limit;
         let begin = (req.query.page - 1) * perPage;
         let end = (req.query.page - 1) * perPage + perPage;
-        let query = await productModel.find();
-        let result = query.slice(begin, end);
-        console.log(result)
-        result = result.map((elem) => {
+        let productName = req.query.productName;
+        let query = "";
+        let result = "";
+        if (!req.query.productName) {
+            console.log('query all');
+            query = await productModel.find();
+        } else {
+            console.log('query contains name');
+            const regex = new RegExp(`${productName}`, 'gi')
+            query = await productModel.find({ productName: regex })
+        };
+        if (req.query.minPrice) {
+            console.log('1')
+            query = query.filter((elem) => {
+                return elem.price >= req.query.minPrice
+            })
+        }
+        if (req.query.maxPrice) {
+            console.log('2')
+            query = query.filter((elem) => {
+                return elem.price <= req.query.maxPrice
+            })
+        }
+        result = query.slice(begin, end).map((elem) => {
             elem = elem.toJSON();
             return ({
                 ...elem,
