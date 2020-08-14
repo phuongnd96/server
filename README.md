@@ -24,12 +24,12 @@ docker container run -p 3000:3000 <app name here>
 
 ## Images listing
 
-    ```
+```
     docker images
-    ```
+```
 
 ## Container listing
 
-    ```
+```
     docker ps
-    ```
+```
