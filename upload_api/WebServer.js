@@ -42,6 +42,9 @@ try {
 } catch (error) {
     console.log(error.message)
 };
+app.use(function () {
+    console.log(`Request at: ${new Date().toISOString()}`);
+})
 app.post("/admin/upload/add/main", uploadMain.array('mainFile', 1), async (req, res, next) => {
     console.log(req.body);
     try {

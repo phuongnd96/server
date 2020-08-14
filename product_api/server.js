@@ -9,7 +9,7 @@ const { response } = require('express');
 const dotenv = require('dotenv').config();
 const getProductRoute = require('./handlers/get_product_main').getProductRoute;
 const getProductDetailRoute = require('./handlers/get_product_detail').getProductDetailRoute;
-const {getProductTypeRoute}=require('./handlers/get_product_type');
+const { getProductTypeRoute } = require('./handlers/get_product_type');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
@@ -24,6 +24,9 @@ try {
 } catch (error) {
     console.log(error.message)
 };
+app.use(function () {
+    console.log(`Request at: ${new Date().toISOString()}`);
+})
 
 app.get("/test", (req, res, next) => {
     for (let i = 0; i < 1e7; i++);
@@ -35,8 +38,8 @@ app.get("/product", (req, res, next) => {
 app.get("/detail", (req, res, next) => {
     getProductDetailRoute(req, res, next);
 })
-app.get("/productType",(req,res,next)=>{
-    getProductTypeRoute(req,res,next);
+app.get("/productType", (req, res, next) => {
+    getProductTypeRoute(req, res, next);
 })
 
 app.listen(PORT, () => {
