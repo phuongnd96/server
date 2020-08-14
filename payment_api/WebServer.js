@@ -21,6 +21,9 @@ try {
 } catch (error) {
     console.log(error.message)
 };
+app.use(function () {
+    console.log(`Request at: ${new Date().toISOString()}`);
+})
 app.get("/hello", (req, res, next) => {
     res.send("hello")
 })
