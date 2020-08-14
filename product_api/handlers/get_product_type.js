@@ -16,7 +16,5 @@ async function getProductTypeRouteHandler(req, res, next) {
     } catch (error) {
         res.send(error)
     }
-
-
 }
 exports.getProductTypeRoute = getProductTypeRoute;
