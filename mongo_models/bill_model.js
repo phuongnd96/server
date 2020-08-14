@@ -5,16 +5,16 @@ const BillSchema = new Schema({
     name: String,
     phone: String,
     email: String,
+    address:String,
     isPaid: Boolean,
     purchaseDate: { type: Date},
     paidDate:{ type: Date},
     products: [
         {
-            productId: String,
-            color: String,
-            quantityPurchase: Number,
+            productName: String,
+            quantity: Number,
             price: Number,
-            total: String
+            total: Number
         }
     ]
 })

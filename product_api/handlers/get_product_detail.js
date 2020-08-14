@@ -1,10 +1,11 @@
 const express = require('express');
 const { productDetailModel } = require('../../mongo_models/product_model');
 const getProductDetailRoute = express.Router();
+const pid=process.pid;
 getProductDetailRoute.use(getProductDetailRouteHandler);
 async function getProductDetailRouteHandler(req, res, next) {
-    console.log(req.query);
     try {
+        console.log(`Handled by process ${pid}`);
         let queryResult = await productDetailModel.find({ productName: req.query.productName });
         if (!queryResult.length) {
             throw new Error('An error occured.');
