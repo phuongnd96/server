@@ -21,6 +21,9 @@ try {
 } catch (error) {
     console.log(error.message)
 };
+app.get("/hello", (req, res, next) => {
+    res.send("hello")
+})
 app.post("/payment", (req, res, next) => {
     paymentRoute(req, res, next);
 })
