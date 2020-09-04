@@ -3,7 +3,7 @@
 #### in root dir
 
 ```
-docker build -t <app name here>
+docker build -t <app name here> .
 ```
 
 > ---
